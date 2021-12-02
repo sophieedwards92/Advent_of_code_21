@@ -1,3 +1,4 @@
+git mv Day_1_Day_1.py
 import pandas as pd
 
 data = pd.read_csv(r'C:\Users\sophie\IdeaProjects\Python\Current\Advent_of_code_2021\Day_1_input.csv')
