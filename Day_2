@@ -16,3 +16,26 @@ depth = down-up
 answer = horitontal*depth
 
 print(answer)
+
+# Part 2 (new method, part 1 method not helpful...)
+
+split_list = []
+for item in column_1:
+    create_array = item.replace("\n","")
+    split_item = create_array.split(' ')
+    split_list.append(split_item)
+
+horizontal = 0
+depth = 0
+aim = 0
+
+for item in split_list:
+    if item[0] == 'forward':
+        horizontal += int(item[1])
+        aim += (depth * int(item[1]))
+    elif item[0] == 'down':
+        depth += int(item[1])
+    elif item[0] == 'up':
+        depth -= int(item[1])
+
+print(horizontal * aim)
